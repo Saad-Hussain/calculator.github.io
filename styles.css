@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(125deg,#2c3e50,#27ae60,#2980b9,#e74c3c,#8e44ad);
+    background-size: 400% 400%;
+    animation: bganimation 65s infinite;
+}
+
+@keyframes bganimation {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+
+.calculator{
+    position: relative;
+    display: grid;
+    
+}
+
+.calculator .value{
+    grid-column: span 5;
+    height: 140px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    background: rgb(223, 223, 223);
+    border-radius: 10px;
+}
+.calculator span{
+    display: grid;
+    width: 70px;
+    height: 80px;
+    color: #fff;
+    background: #0c2835;
+    place-items: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+    
+}
+.calculator span:active{
+    background:#0d5577;
+}
+
+.calculator span.clear{
+    grid-column: span 2;
+    width: 140px;
+    background: #ff3077;
+}
+
+.calculator span.pluss{
+    grid-row: span 2;
+    height: 160px;
+}
+.calculator span.equal{
+    background: #03b1ff;
+}
